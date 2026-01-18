@@ -2,23 +2,101 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Vee Bot - Protocols</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vee Bot - System Protocols</title>
     <style>
-        body { font-family: monospace; background: #0d1117; color: #c9d1d9; padding: 20px; }
-        .box { max-width: 600px; margin: auto; border: 1px solid #30363d; padding: 20px; border-radius: 8px; background: #161b22; }
-        h1 { color: #58a6ff; text-align: center; }
-        .status { color: #3fb950; font-weight: bold; }
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --border: #30363d;
+            --text: #c9d1d9;
+            --blue: #58a6ff;
+            --green: #3fb950;
+        }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: var(--bg); 
+            color: var(--text); 
+            line-height: 1.6; 
+            margin: 0; 
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container { 
+            max-width: 900px; 
+            width: 100%;
+            background-color: var(--card); 
+            border: 1px solid var(--border); 
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+        }
+        .header { text-align: center; border-bottom: 2px solid var(--border); padding-bottom: 20px; margin-bottom: 30px; }
+        h1 { color: var(--blue); margin: 0; font-size: 2rem; }
+        h2 { color: #f0f6fc; border-left: 4px solid var(--blue); padding-left: 15px; margin-top: 40px; }
+        .status-pill { 
+            display: inline-block; 
+            padding: 5px 15px; 
+            background: rgba(63, 185, 80, 0.1); 
+            color: var(--green); 
+            border-radius: 20px; 
+            font-weight: bold; 
+            font-family: monospace;
+            margin-top: 10px;
+        }
+        p, li { font-size: 1.1rem; color: #8b949e; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        footer { margin-top: 60px; text-align: center; font-size: 0.9rem; border-top: 1px solid var(--border); padding-top: 20px; }
+        
+        /* Ajustes para Telemóvel */
+        @media (max-width: 600px) {
+            .container { padding: 20px; }
+            h1 { font-size: 1.5rem; }
+            p, li { font-size: 1rem; }
+        }
     </style>
 </head>
 <body>
-    <div class="box">
-        <h1>📡 VEE SYSTEM PROTOCOLS</h1>
-        <p><strong>Status:</strong> <span class="status">OPERATIONAL</span></p>
-        <hr>
-        <h2>Privacy Policy</h2>
-        <p>Vee (Version 1.0) does not store personal data. All processing occurs in real-time for command execution.</p>
-        <h2>Terms of Service</h2>
-        <p>By using this bot, you agree to maintain efficiency. Failure to follow protocols may result in a blacklist.</p>
+    <div class="container">
+        <div class="header">
+            <h1>📡 VEE SYSTEM PROTOCOLS</h1>
+            <div class="status-pill">● SYSTEM ONLINE</div>
+        </div>
+
+        <section>
+            <h2>1. Privacy Policy (Política de Privacidade)</h2>
+            <p>Vee (Version 1.0) is programmed for maximum efficiency. We respect user data by not keeping any of it.</p>
+            <ul>
+                <li><strong>Data Collection:</strong> We do not store messages, images, or personal data in external databases.</li>
+                <li><strong>Real-time Processing:</strong> All data (User IDs, Usernames) is processed in volatile memory only for the duration of the command.</li>
+                <li><strong>Third Parties:</strong> Your data is never sold or shared with third-party entities.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2. Terms of Service (Termos de Serviço)</h2>
+            <p>By using Vee, you agree to the following logic-based protocols:</p>
+            <ul>
+                <li><strong>Usage:</strong> The bot must not be used for harassment or illegal activities.</li>
+                <li><strong>Responsibility:</strong> The developer is not responsible for actions taken by server moderators using the <code>!kick</code> or <code>!ban</code> commands.</li>
+                <li><strong>Blacklist:</strong> We reserve the right to restrict access to the bot if "Critical Incompetence" or TOS violations are detected.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Command Transparency</h2>
+            <p>Vee uses specific permissions to operate:</p>
+            <ul>
+                <li><strong>Moderation:</strong> Requires "Manage Messages" and "Kick/Ban Members" to maintain order.</li>
+                <li><strong>Interactions:</strong> Uses mentions to identify subjects in fun commands (ship, ask, etc.).</li>
+            </ul>
+        </section>
+
+        <footer>
+            &copy; 2026 Vee Bot | Media Manager of Gardenview | Designed for Efficiency.
+        </footer>
     </div>
 </body>
 </html>
